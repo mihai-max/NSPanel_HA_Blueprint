@@ -1,0 +1,683 @@
+Page keyb_num
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : on press and release
+        Opacity            : 127
+        Width              : 480
+        Effect             : load
+        Effect Priority    : 0
+        Effect Time        : 300
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (white)
+    
+    Events
+        Preinitialize Event
+            dim=brightness
+            if(api==0)
+            {
+                page page_id.val
+            }
+            printh 92
+            prints "current_page",0
+            printh 00
+            prints "keyb_num",0
+            printh 00
+            printh FF FF FF
+        
+Variable (int32) page_id
+    Attributes
+        ID   : 17
+        Scope: local
+        Value: 0
+    
+Variable (string) key
+    Attributes
+        ID            : 19
+        Scope         : local
+        Text          : 
+        Max. Text Size: 10
+    
+Variable (string) domain
+    Attributes
+        ID            : 20
+        Scope         : local
+        Text          : alarm
+        Max. Text Size: 10
+    
+Variable (string) aux
+    Attributes
+        ID            : 21
+        Scope         : local
+        Text          : 
+        Max. Text Size: 255
+    
+Variable (string) value
+    Attributes
+        ID            : 22
+        Scope         : local
+        Text          : 
+        Max. Text Size: 10
+    
+Text t0
+    Attributes
+        ID                  : 1
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : on press and release
+        Opacity             : 127
+        x coordinate        : 105
+        y coordinate        : 10
+        Width               : 240
+        Height              : 296
+        Effect              : load
+        Effect Priority     : 0
+        Effect Time         : 300
+        Fill                : solid color
+        Style               : border
+        Associated Keyboard : none
+        Border Color        : 7583
+        Border Width        : 2
+        Font ID             : 0
+        Back. Color         : 14823
+        Font Color          : 0
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : character
+        Text                : 
+        Max. Text Size      : 10
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+Text pin
+    Attributes
+        ID                  : 2
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : on press and release
+        Opacity             : 127
+        x coordinate        : 110
+        y coordinate        : 54
+        Width               : 230
+        Height              : 32
+        Effect              : load
+        Effect Priority     : 0
+        Effect Time         : 300
+        Fill                : solid color
+        Style               : border
+        Associated Keyboard : none
+        Border Color        : 50712
+        Border Width        : 2
+        Font ID             : 3
+        Back. Color         : 65535
+        Font Color          : 0
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : password
+        Text                : 
+        Max. Text Size      : 60
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+Text title
+    Attributes
+        ID                  : 18
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : on press and release
+        Opacity             : 127
+        x coordinate        : 148
+        y coordinate        : 12
+        Width               : 154
+        Height              : 40
+        Effect              : load
+        Effect Priority     : 0
+        Effect Time         : 300
+        Fill                : solid color
+        Style               : flat
+        Associated Keyboard : none
+        Font ID             : 3
+        Back. Color         : 14823
+        Font Color          : 65535
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : character
+        Text                : Alarm
+        Max. Text Size      : 30
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+Button b1
+    Attributes
+        ID                        : 3
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 110
+        y coordinate              : 91
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 1
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b1.txt
+        
+Button bclose
+    Attributes
+        ID                        : 4
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 303
+        y coordinate              : 12
+        Width                     : 40
+        Height                    : 40
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : flat
+        Font ID                   : 8
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 63488
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : top
+        State                     : unpressed
+        Text                      : \xee\x85\x98
+        Max. Text Size            : 3
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            page page_id.val
+        
+Button b2
+    Attributes
+        ID                        : 5
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 188
+        y coordinate              : 91
+        Width                     : 74
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 2
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b2.txt
+        
+Button b3
+    Attributes
+        ID                        : 6
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 267
+        y coordinate              : 91
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 3
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b3.txt
+        
+Button b4
+    Attributes
+        ID                        : 7
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 110
+        y coordinate              : 145
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 4
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b4.txt
+        
+Button b5
+    Attributes
+        ID                        : 8
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 188
+        y coordinate              : 145
+        Width                     : 74
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 5
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b5.txt
+        
+Button b6
+    Attributes
+        ID                        : 9
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 267
+        y coordinate              : 145
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 6
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b6.txt
+        
+Button b7
+    Attributes
+        ID                        : 10
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 110
+        y coordinate              : 199
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 7
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b7.txt
+        
+Button b8
+    Attributes
+        ID                        : 11
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 188
+        y coordinate              : 199
+        Width                     : 74
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 8
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b8.txt
+        
+Button b9
+    Attributes
+        ID                        : 12
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 267
+        y coordinate              : 199
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 9
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b9.txt
+        
+Button bclear
+    Attributes
+        ID                        : 13
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press
+        Opacity                   : 127
+        x coordinate              : 110
+        y coordinate              : 253
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 10
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : \xee\x99\x81
+        Max. Text Size            : 3
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt=""
+        
+Button b0
+    Attributes
+        ID                        : 14
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 188
+        y coordinate              : 253
+        Width                     : 74
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 4
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : 0
+        Max. Text Size            : 1
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            pin.txt+=b0.txt
+        
+Button benter
+    Attributes
+        ID                        : 15
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press
+        Opacity                   : 127
+        x coordinate              : 267
+        y coordinate              : 253
+        Width                     : 73
+        Height                    : 49
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : border
+        Border Color              : 50712
+        Border Width              : 2
+        Font ID                   : 10
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 59164
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : \xee\x84\xab
+        Max. Text Size            : 3
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Release Event
+            aux.txt="{\"page\": \"keyb_num\", \"key\": \""+key.txt+"\", \"value\": \""+value.txt+"\", \"pin\": \""+pin.txt+"\", \"base_domain\": \""+domain.txt+"\"}"
+            printh 92
+            prints "localevent",0
+            printh 00
+            prints aux.txt,0
+            printh 00
+            printh FF FF FF
+        
+Button bview
+    Attributes
+        ID                        : 16
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : on press and release
+        Opacity                   : 127
+        x coordinate              : 107
+        y coordinate              : 12
+        Width                     : 40
+        Height                    : 40
+        Effect                    : load
+        Effect Priority           : 0
+        Effect Time               : 300
+        Fill                      : solid color
+        Style                     : flat
+        Font ID                   : 8
+        Back. Color               : 14823
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 65504
+        Font Color (Unpressed)    : 65535
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : top
+        State                     : unpressed
+        Text                      : \xee\x88\x87
+        Max. Text Size            : 3
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Press Event
+            if(pin.pw==1)
+            {
+                pin.pw=0
+            }else
+            {
+                pin.pw=1
+            }
+        
